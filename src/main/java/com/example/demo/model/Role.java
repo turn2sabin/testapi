@@ -1,36 +1,40 @@
 package com.example.demo.model;
 
+import com.example.demo.model.User;
+
+import javax.persistence.*;
+import java.util.Set;
+
+
 public class Role {
+    private Long id;
 
-    private int id;
+    private String name;
 
-    private String role;
 
-    private String desc;
+    private Set<User> users;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getRole() {
-        return role;
+    public String getName() {
+        return name;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getDesc() {
-        return desc;
+    public Set<User> getUsers() {
+        return users;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
-
-
 }
